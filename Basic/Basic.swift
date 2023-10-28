@@ -9,7 +9,8 @@ import XCTest
 
 class Basic: XCTestCase {
     
-    /* STRING - to remove a character at specified index of a given non-empty string.
+    /*
+     * STRING - to remove a character at specified index of a given non-empty string.
      * The value of the specified index will be in the range 0..str.length()-1 inclusive.
      */
     func remove_char(str1: String, n: Int) -> String {
@@ -46,7 +47,7 @@ class Basic: XCTestCase {
         }
     }
     
-    //STRING - to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
+    // STRING - to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
     func isstring(word: String) -> String {
         if word.hasPrefix("Is") == true
         {
@@ -124,6 +125,7 @@ class Basic: XCTestCase {
             return false
         }
     }
+    
     
     // STRING to check if a given string begins with "fix", except the 'f' can be any character or number.
     func beginsWithFix(_ input: String) -> Bool {
@@ -349,6 +351,7 @@ class Basic: XCTestCase {
     
     // ARRAY to test whether a value presents sequentially three times in an array of integers or not.
     func test_Triples(_ input: [Int]) -> Bool {
+        
         for (index, number) in input.enumerated() {
             let thirdIndex = index + 2
             let secondIndex = index + 1
@@ -364,7 +367,10 @@ class Basic: XCTestCase {
     //-- execution of the function, entry point
     func testCode() throws {
         
+        //-- first commit
+        print("Starting executing code...")
         print(test_Triples([1, 1, 1, 2, 2]))
+        print("Execution finished")
         print(test_Triples([1, 1, 1, 2, 2, 2, 2]))
         print(test_Triples([1, 1, 3, 3, 1]))
         
