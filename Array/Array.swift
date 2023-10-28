@@ -10,23 +10,6 @@ import XCTest
 class Array: XCTestCase {
     
     //  to check if 5 appears as either the first or last element in a given array of integers. The array length should be 1 or more.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     func firstlastElement (_ input: [Int]) -> Bool {
         guard input.count >= 1 else {
             return false
@@ -63,7 +46,7 @@ class Array: XCTestCase {
         return false
     }
     
-    //  4. to compute the sum of all the elements of a given array of integers and length 4.
+    //  4 to compute the sum of all the elements of a given array of integers and length 4.
     func sumArray (_input: [Int]) -> Int {
         guard _input.count == 4 else {
             fatalError("array must have 4 elements")
