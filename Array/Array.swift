@@ -2,7 +2,7 @@
 //  Array.swift
 //  Array
 //
-//  Created by Iuliia Kuramshyna on 28/10/23.
+//  Created by Iuliia Kuramshyna on 28/10/23 dot
 //
 
 import XCTest
@@ -21,14 +21,13 @@ class Array: XCTestCase {
     }
     
     // to check whether the first element and the last element of a given array of integers are equal. The array length must be 1 or more.
-    func checkForEqual (_ input: [Int]) -> Bool {
+    func checkForEqual          (_ input: [Int]) -> Bool {
         guard input.count >= 1 else {
             return false
         }
         if input.first == input.last {
             return true
-        }
-        else {
+        } else {
             return false
         }
     }
