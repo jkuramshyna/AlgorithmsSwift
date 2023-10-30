@@ -63,7 +63,7 @@ class Array: XCTestCase {
         return new_arra
     }
     
-    // 5. to create a new array with the elements in reverse order of a given array of integers.
+    // 6. to create a new array with the elements in reverse order of a given array of integers.
     func reverseOrder (_ arra: [Int]) -> [Int] {
         var reversedArray = [Int]()
         for element in arra.reversed() {
@@ -72,8 +72,62 @@ class Array: XCTestCase {
         return reversedArray
     }
     
+    // 7. to find the larger value of a given array of integers and set all the other elements with that value. Return the changed array.
+    
+    func replaceWithLargest(_ array: [Int]) -> [Int] {
+        guard let maxElement = array.max() else {
+            return array  // Return the original array if it's empty.
+        }
+        
+        var changedArray = [Int]()
+        
+        for _ in array {
+            changedArray.append(maxElement)
+        }
+        
+        return changedArray
+    }
+   
+    // 8. to compute the sum of the first 2 elements of a given array of integers. Return 0 if the length of the given array is 0 and return the first element value If the array length is less than 2.
+    
+    func twoElements(_ array: [Int]) -> Int {
+        if array.count == 0 {
+            return 0
+        }
+        else if array.count < 2 {
+            return array[0]
+        }
+        else {
+            return array[0] + array[1]
+        }
+    }
+    
+    // 9. create a new array of length 2 containing the middle elements from two give array of integers and length 3.
+    
+    func arrayLength (_ a:[Int], _ b:[Int]) -> [Int] {
+        guard a.count == 3, b.count == 3 else {
+            return []
+        }
+        let midA = a[1]
+        let midB = b[1]
+        return [midA, midB]
+    }
+    
+    // 10. create a new array of length 2 containing the first and last elements from a given array of integers. The given array length must be 1 or more. ???????????
+
+    func arraFandL (_ array:[Int]) -> [Int] {
+        guard  array.count >= 1 else {
+            return []
+        }
+        if let primero = array.first, let ultimo = array.last {
+        return [primero, ultimo]
+        } else {
+            return []
+        }
+    }
+    
     func testExample() throws {
-        print(reverseOrder([3,2,4,4,]))
+        print( arrayLength([1], [5,6]))
     }
     
 }
